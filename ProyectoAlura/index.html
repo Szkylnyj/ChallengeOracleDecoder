@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="logo">
+        <img src="/imagenes/Logo.png" alt="Logo Alura">
+    </header>
+    
+    <div class="contenedor">
+        <div class="entrada-lateral">
+            <input type="text" id="entradaUsuario" min="1" max="1000" class="campoEntrada" placeholder="Ingrese el texto aqui">
+            <h6>Solo letras minúsculas y sin acento</h6>
+            <div class="botones">
+                <button class="encriptar" onclick="envioFormulario(event, 'encriptar');">Encriptar</button>
+                <button class="desencriptar" onclick="envioFormulario(event, 'desencriptar');">Desencriptar</button>
+            </div>
+        </div>
+        <div class="cuerpo" id="cuerpo">
+            <img id="imagen" src="imagenes/Muñeco.png" alt="Persona Arrodillada con una lupa">
+            <div id="temp" class="temp">
+                <h4>Ningún mensaje fue encontrado</h4>
+                <p>Ingresa el texto que deseas encriptar o desencriptar.</p>
+            </div>
+            <p id="textoResultado" style="display: none;"></p>
+            <button id="botonCopiar" onclick="copiarAlPortapapeles();" style="display: none;">Copiar</button>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <h6>Vladimir Szkylnyj 2024</h6>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>

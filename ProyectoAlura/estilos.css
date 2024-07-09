@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --fondo: rgba(216, 223, 232, 1);
+    --fondoDesencriptado: rgba(229, 229, 229, 1);
+    --fondoTablet:rgba(243, 245, 252, 1);
+    --fuente: rgba(10, 56, 113, 1);
+    --gris: rgba(73, 80, 87, 1);
+    --grisOscuro:rgba(52, 58, 64, 1);
+    --blanco:rgba(255, 255, 255, 1);
+}
+
+body {
+    background-color: var(--fondo);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+}
+
+.logo {
+    display: flex;
+    align-items: flex-start;
+    margin-left: 10px;
+    margin-top: 48px;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    gap: 10px;
+    max-width: 1200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    flex-grow: 1;
+}
+
+.entrada-lateral {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.campoEntrada {
+    justify-content: start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    background-color: var(--fondo);
+    padding: 10px;
+    margin-bottom: 100px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    color: var(--fuente);
+    font-size: x-large;
+    font-weight: 400;
+    display: block;
+    overflow: auto;
+}
+
+.campoEntrada::placeholder {
+    color: var(--fuente);
+    font-size: x-large;
+    font-weight: 400;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform: translate(0, 0);
+}
+
+.cuerpo {
+    padding: 10px;
+    border-radius: 32px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: var(--gris);
+    font-weight: 500;
+}
+
+.temp {
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    text-align: center;
+    align-items: center;
+    max-width: 304px;
+}
+
+.temp h4 {
+    font-size: 24px;
+    color: var(--grisOscuro);
+}
+
+.temp p {
+    font-size: 16px;
+    color: var(--gris);
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    margin: 12px;
+    margin-left: 0px;
+    border-radius: 24px;
+    border: solid 0.5px var(--fuente);
+    font-size: 16px;
+    font-weight: 400;
+    width: 48%;
+    height: 67px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.encriptar {
+    background-color: var(--fuente);
+    color: white;
+}
+
+.desencriptar {
+    background-color: rgba(216, 223, 232, 1);
+    color: var(--fuente);
+}
+
+#botonCopiar {
+    display: none;
+    margin-top: 20px;
+}
+
+.cuerpoConTexto {
+    background-color: var(--blanco);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    justify-content: space-between;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer h6 {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--grisOscuro);
+    font-weight: 400;
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: var(--fondoTablet);
+        margin: 0%;
+        margin-top: 20px;
+    }
+
+    .cuerpo {
+        height: auto;
+        width: 90%;
+        margin-top: 20px;
+        background-color: var(--fondoTablet);
+        border-radius: 32px;
+        box-shadow: 0px 24px 32px rgba(0, 0, 0, 0.25);
+    }
+
+    .entrada-lateral {
+        width: 90%;
+    }
+
+    .botones {
+        width: 100%;
+    }
+
+    #botonCopiar {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        gap: 10px;
+        background-color: var(--fondoTablet);
+    }
+
+    .entrada-lateral {
+        width: 90%;
+        justify-content: center;
+        background-color: var(--fondoTablet);
+    }
+
+    .botones {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .cuerpo {
+        width: 90%;
+        height: auto;
+        min-height: 60px;
+        margin-top: 10px;
+    }
+
+    #imagen {
+        display: none;
+    }
+}
